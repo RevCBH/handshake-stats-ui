@@ -1,5 +1,4 @@
 import React from 'react';
-// import Box from 'components/Box'
 import './App.css';
 
 import { Chart } from 'react-charts'
@@ -44,10 +43,6 @@ class StatsChart extends React.Component {
     } else if (!isLoaded) {
       return <div>Loading...</div>
     } else {
-      // const axes = [
-      //   { primary: true, type: 'time', position: 'bottom' },
-      //   { type: 'linear', position: 'left' }
-      // ]
       return (
         <div
           style={{
@@ -55,7 +50,6 @@ class StatsChart extends React.Component {
             height: '300px'
           }}
         >
-          {/* <Chart data={items} axes={axes} tooltip /> */}
           <Line data={items} />
         </div>
       )
@@ -100,12 +94,14 @@ function App() {
       <p className="App-body">
         <h1>Active auctions</h1>
         <StatsChart query='running-auctions/avg' />
-        <h1>Avg. new auctions per block</h1>
+        <h1>Avgerage new auctions per block</h1>
         <StatsChart query='opens/avg' />
         <h1>Number of airdrops clamied</h1>
         <StatsChart query='num-airdrops/sum' />
         <h1>Fees per block</h1>
         <StatsChart query='fees/avg' />
+        <h1>Blocks</h1>
+        <StatsChart query='num-blocks/sum' />
       </p>
     </div>
   );
