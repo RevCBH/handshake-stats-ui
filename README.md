@@ -1,3 +1,6 @@
+# Usage
+Currently, connects to the [handshake-stats](https://github.com/RevCBH/handshake-stats-ui) HSD Plugin on localhost:8080.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
