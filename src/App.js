@@ -14,7 +14,8 @@ class StatsChart extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:8080/timeseries/${this.props.query}?bucketSize=1%20day`)
+    const endpoint = process.env.REACT_APP_API_ENDPOINT || "http://localhost:8080"
+    fetch(`${endpoint}/timeseries/${this.props.query}?bucketSize=1%20day`)
       .then(res => res.json())
       .then(
         (result) => {
